@@ -90,22 +90,27 @@ public class Queue {
 
     public static void main(String[] args) {
         Queue myQueue = new Queue(1);
-
-        myQueue.getFirst();
-        myQueue.getLast();
-        myQueue.getLength();
-
-        myQueue.print();
-
-
         myQueue.enqueue(2);
         myQueue.enqueue(3);
-        myQueue.getFirst();
-        myQueue.getLast();
-        myQueue.getLength();
+
+        System.out.println(myQueue.dequeue().value);
+        System.out.println(myQueue.dequeue().value);
+        System.out.println(myQueue.dequeue().value);
+
+//        myQueue.getFirst();
+//        myQueue.getLast();
+//        myQueue.getLength();
+//
+//        myQueue.print();
 
 
-        myQueue.print();
+
+//        myQueue.getFirst();
+//        myQueue.getLast();
+//        myQueue.getLength();
+//
+//
+//        myQueue.print();
     }
 
 
