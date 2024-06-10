@@ -6,10 +6,11 @@ public class Queue {
     private Node last;
     private int lenght;
 
-    public class Node{
+    public class Node {
         int value;
         Node next;
-// Construtores
+
+        // Construtores
         Node(int value) {
             this.value = value;
         }
@@ -22,33 +23,26 @@ public class Queue {
         lenght++;
     }
 
- // Métodos
-    public void getFirst(){
-        if(first != null){
+    // Métodos
+    public void getFirst() {
+        if (first != null) {
             System.out.println(" First: " + first.value);
-        }else{
+        } else {
             System.out.println("A fila está vazia");
         }
     }
-    public void getLast(){
-        if(last != null){
+
+    public void getLast() {
+        if (last != null) {
             System.out.println(" Last: " + last.value);
-        }else{
+        } else {
             System.out.println("A fila está vazia");
         }
     }
 
-
-
-
-
-
-
-
-
-
-
-
+private void getLength(){
+    System.out.println("Length: " + lenght);
+}
 
 
 
