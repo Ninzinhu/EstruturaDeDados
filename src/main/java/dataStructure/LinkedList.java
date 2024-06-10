@@ -71,7 +71,7 @@ public class LinkedList {
 
     // Método append
     public void append(String data) {
-        Node newNode = new Node(data) ;
+        Node newNode = new Node(data);
         if (length == 0) {
             head = newNode;
             tail = newNode;
@@ -83,12 +83,12 @@ public class LinkedList {
     }
 
     // Método Remover do final da lista
-    public Node removeLast()    {
+    public Node removeLast() {
         if (length == 0) return null;
         Node pre = head;
         Node temp = null;
 
-        while(pre.next != tail) {
+        while (pre.next != tail) {
             pre = pre.next;
         }
 
@@ -97,7 +97,7 @@ public class LinkedList {
         tail.next = null;
 
         length--;
-        if(length == 0) {
+        if (length == 0) {
             head = null;
             tail = null;
 
@@ -108,12 +108,12 @@ public class LinkedList {
     }
 
     // Método Prepend
-    public void prepend(String data){
+    public void prepend(String data) {
         Node newNode = new Node(data);
-        if (length == 0){
+        if (length == 0) {
             head = newNode;
             tail = newNode;
-        } else{
+        } else {
             newNode.next = head;
             head = newNode;
         }
@@ -121,48 +121,49 @@ public class LinkedList {
     }
 
     // Método Remover do Inicio
-public Node removeFirst(){
-        if (length == 0 ) return null;
+    public Node removeFirst() {
+        if (length == 0) return null;
         Node temp = head;
         head = head.next;
         temp.next = null;
         length--;
-        if(length == 0){
+        if (length == 0) {
             head = null;
             tail = null;
 
         }
         return temp;
-}
+    }
 
-// Operação: Ler de uma posição  método (GET)
-    public Node get(int index){
+    // Operação: Ler de uma posição  método (GET)
+    public Node get(int index) {
         if (index < 0 || index >= length) return null;
         Node temp = head;
-        for(int i = 0; i <index; i++){
+        for (int i = 0; i < index; i++) {
             temp = temp.next;
         }
-        return  temp;
+        return temp;
     }
- // Método Set
- public boolean set(int index, String data){
-        Node temp = get(index;
-        if(temp != null){
+
+    // Método Set
+    public boolean set(int index, String data) {
+        Node temp = get(index);
+        if (temp != null) {
             temp.data = data;
             return true;
         }
         return false;
 
- }
+    }
 
- // Método Insert
-    public boolean insert(int index, String data){
+    // Método Insert
+    public boolean insert(int index, String data) {
         if (index < 0 || index > length) return false;
-        if(index == 0){
+        if (index == 0) {
             prepend(data);
             return true;
         }
-        if (index == length){
+        if (index == length) {
             append(data);
             return true;
         }
@@ -176,9 +177,21 @@ public Node removeFirst(){
 
     }
 
+    // Método Remove em uma determinada posição
+    public Node remov(int index) {
+        if (index < 0 || index >= length) return null;
+        if (index == 0) return removeFirst();
+        if (index == length - 1) removeLast();
 
+        Node prev = get(index - 1);
+        Node temp = prev.next;
 
+        prev.next = temp.next;
+        temp.next = null;
+        length--;
 
+        return temp;
+    }
 
 
     public static void main(String[] args) {
@@ -187,7 +200,7 @@ public Node removeFirst(){
         list.append("Elemento 3");
         list.prepend("elemento 0");
 
-        list.insert(3,"Elemento 2.5" );
+        list.insert(3, "Elemento 2.5");
 
 //        System.out.println(list.get(2).data);
 
@@ -196,6 +209,8 @@ public Node removeFirst(){
 //        list.getHead();
 //        list.getTail();
 //        list.getLegth();
+        list.print();
+        list.set(1, "Elemento 0.5");
         list.print();
     }
 
