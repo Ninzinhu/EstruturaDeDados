@@ -107,6 +107,19 @@ public class LinkedList {
 
     }
 
+    // Método Prepend
+    public void preprend(String data){
+        Node newNode = new Node(data);
+        if (length == 0){
+            head = newNode;
+            tail = newNode;
+        } else{
+            newNode.next = head;
+            head = newNode;
+        }
+        length++;
+    }
+
 
 
 
