@@ -49,9 +49,10 @@ public class Tree {
         }
     }
 
+    // Métodos Travessia
 
     // Método preOrder
-    public void preOrder(){
+    public void preOrder() {
         preOrder(root);
     }
 
@@ -61,6 +62,20 @@ public class Tree {
         System.out.println(node.value);
         preOrder(node.left);
         preOrder(node.right);
+
+    }
+
+    // Método InOrder
+    public void inOrder() {
+        inOrder(root);
+    }
+
+    private void inOrder(final Node node) {
+        // E R D (Esquerda,raiz, direita)
+        if (node == null) return;
+        inOrder(node.left);
+        System.out.println(node.value);
+        inOrder(node.right);
 
     }
 
@@ -76,7 +91,7 @@ public class Tree {
         tree.insert(72);
 
         System.out.println("-----------------------------------------");
-        tree.preOrder();
+        tree.inOrder();
         System.out.println("-----------------------------------------");
 
 //        System.out.println(tree.root.value);
