@@ -42,7 +42,7 @@ public class BST {
 
     // Método de verificação (Pesquisa)
     public boolean contains(int value) {
-        return contains(root, value)
+        return contains(root, value);
 
     }
 
@@ -50,7 +50,7 @@ public class BST {
         if (root == null) return false;
         if (root.value == value) return true;
         if (value > root.value) return contains(root.right, value);
-        if (value < root.value) return contains(root.left, value)
+        if (value < root.value) return contains(root.left, value);
     }
 
 
