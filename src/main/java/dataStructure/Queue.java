@@ -71,6 +71,22 @@ public class Queue {
         lenght++;
     }
 
+    // Método Desenfileirar
+
+    public Node dequeue() {
+        if (lenght == 0) return null;
+        Node temp = first;
+        if (lenght == 1) {
+            first = null;
+            last = null;
+        } else {
+            first = first.next;
+            temp.next = null;
+        }
+        lenght++;
+        return temp;
+    }
+
 
     public static void main(String[] args) {
         Queue myQueue = new Queue(1);
@@ -78,6 +94,16 @@ public class Queue {
         myQueue.getFirst();
         myQueue.getLast();
         myQueue.getLength();
+
+        myQueue.print();
+
+
+        myQueue.enqueue(2);
+        myQueue.enqueue(3);
+        myQueue.getFirst();
+        myQueue.getLast();
+        myQueue.getLength();
+
 
         myQueue.print();
     }
