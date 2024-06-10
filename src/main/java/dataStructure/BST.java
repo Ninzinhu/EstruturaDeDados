@@ -123,7 +123,7 @@ public class BST {
         tree.insert(72);
 
 
-        tree.deleteNode(66);
+        tree.deleteNode(8);
         tree.inOrder();
 
     }
