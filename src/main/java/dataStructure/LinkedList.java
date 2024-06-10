@@ -178,7 +178,7 @@ public class LinkedList {
     }
 
     // Método Remove em uma determinada posição
-    public Node remov(int index) {
+    public Node remove(int index) {
         if (index < 0 || index >= length) return null;
         if (index == 0) return removeFirst();
         if (index == length - 1) removeLast();
@@ -200,18 +200,22 @@ public class LinkedList {
         list.append("Elemento 3");
         list.prepend("elemento 0");
 
-        list.insert(3, "Elemento 2.5");
+        list.remove(2);
+        list.print();
 
-//        System.out.println(list.get(2).data);
-
-//       System.out.println(list.removeFirst().data);
+//        list.insert(3, "Elemento 2.5");
+//
+////        System.out.println(list.get(2).data);
+//
+////       System.out.println(list.removeFirst().data);
+////        list.print();
+////        list.getHead();
+////        list.getTail();
+////        list.getLegth();
 //        list.print();
-//        list.getHead();
-//        list.getTail();
-//        list.getLegth();
-        list.print();
-        list.set(1, "Elemento 0.5");
-        list.print();
+//        list.set(1, "Elemento 0.5");
+//        list.print();
+//    }
     }
-
 }
+
