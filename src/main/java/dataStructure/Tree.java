@@ -111,6 +111,25 @@ public class Tree {
 
     }
 
+    // Algoritimo Busca em Profundidade
+    public void DFS() {
+        DFSHelper(root);
+    }
+
+    private void DFSHelper(Node node) {
+        if (node == null) return;
+
+        // Processa o nó atual
+        System.out.println(node.value);
+
+        // Recursivamente processa o nó esquerdo
+        DFSHelper(node.left);
+
+        // Recursivamente processa o nó direito
+        DFSHelper(node.right);
+    }
+
+
 
     public static void main(String[] args) {
         Tree tree = new Tree();
@@ -123,7 +142,7 @@ public class Tree {
         tree.insert(72);
 
         System.out.println("-----------------------------------------");
-        tree.BFS();
+        tree.DFS();
         System.out.println("-----------------------------------------");
 
 //        System.out.println(tree.root.value);
