@@ -75,12 +75,16 @@ public class Tree {
         tree.insert(42);
         tree.insert(72);
 
-        System.out.println(tree.root.value);
-        System.out.println(tree.root.left.value);
-        System.out.println(tree.root.right.value);
+        System.out.println("-----------------------------------------");
+        tree.preOrder();
+        System.out.println("-----------------------------------------");
 
-        System.out.println(tree.root.isLeaf());
-        System.out.println(tree.root.right.isLeaf());
+//        System.out.println(tree.root.value);
+//        System.out.println(tree.root.left.value);
+//        System.out.println(tree.root.right.value);
+//
+//        System.out.println(tree.root.isLeaf());
+//        System.out.println(tree.root.right.isLeaf());
     }
 
 
