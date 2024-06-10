@@ -175,7 +175,7 @@ public Node removeFirst(){
         LinkedList list = new LinkedList("elemento 1");
         list.append("Elemento 2");
         list.append("Elemento 3");
-        list.preprend("elemento 0");
+        list.prepend("elemento 0");
 
         System.out.println(list.get(2).data);
 
