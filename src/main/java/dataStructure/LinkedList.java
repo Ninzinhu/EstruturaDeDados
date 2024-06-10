@@ -58,11 +58,26 @@ public class LinkedList {
         length = 0; // Indicando que o tamanho da lista agora é 0
     }
 
+    // Método Print
+    public void print() {
+        Node temp = this.head;
+        while (temp != null) {
+            System.out.println(temp.data);
+            temp = temp.next;
+        }
+    }
+
+
+
+
+
+
     public static void main(String[] args) {
         LinkedList list = new LinkedList("elemento 1");
         list.getHead();
         list.getTail();
         list.getLegth();
+        list.print();
     }
 
 }
