@@ -144,6 +144,16 @@ public Node removeFirst(){
         }
         return  temp;
     }
+ // Método Set
+ public boolean set(int index, String data){
+        Node temp = get(index;
+        if(temp != null){
+            temp.data = data;
+            return true;
+        }
+        return false;
+
+ }
 
  // Método Insert
     public boolean insert(int index, String data){
@@ -177,14 +187,16 @@ public Node removeFirst(){
         list.append("Elemento 3");
         list.prepend("elemento 0");
 
-        System.out.println(list.get(2).data);
+        list.insert(3,"Elemento 2.5" );
+
+//        System.out.println(list.get(2).data);
 
 //       System.out.println(list.removeFirst().data);
 //        list.print();
 //        list.getHead();
 //        list.getTail();
 //        list.getLegth();
-//        list.print();
+        list.print();
     }
 
 }
