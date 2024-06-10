@@ -53,6 +53,47 @@ public class BST {
         else return contains(root.left, value);
     }
 
+    // Método Menor valor
+    public int minValue(Node currentNode){
+        while(currentNode.left != null){
+            currentNode = currentNode.left;
+        }
+        
+        return currentNode.value;
+    }
+
+
+    // Método Remover
+    public void deleteNode(int value){
+        deleteNode(root, value);
+        
+    }
+
+    private Node deleteNode(Node root, int value) {
+        if (root == null) return null;
+
+        if(value < root.value) {
+            root.left = deleteNode(root.left, value);
+
+        } else if (value > root,value){
+            root.right = deleteNode(root.right, value);
+        } else {
+            if (root.left == null) && (root.right == null) {
+                return null;
+            } else if(root.left == null){
+                return root.right;
+            } else if (root.right == null){
+                return root.left;
+            } else{
+                int minValue = minValue(root.right);
+                root.value = minValue;
+                root.right = deleteNode(root.right, minValue);
+            }
+        }
+
+
+    }
+
 
     // Método InOrder
     public void inOrder() {
