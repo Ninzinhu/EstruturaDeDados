@@ -1,25 +1,24 @@
 package dataStructure;
 
 public class LinkedList {
-// Nossa lista ligada possue 3 campos principais
+    // Nossa lista ligada possue 3 campos principais
     private Node head; // Cabeça
     private Node tail; // Cauda
     private int length; // Tamanho da lista
-
 
 
     class Node {
         String data;
         Node next;
 
-       Node(String data) {
+        Node(String data) {
             this.data = data;
         }
     }
 
     // Contrutor
 
-    public LinkedList(String data){
+    public LinkedList(String data) {
         length = 1;
         Node newNode = new Node(data);
         head = newNode;
@@ -29,8 +28,8 @@ public class LinkedList {
 
 
     // Métodos
-    public void getHead(){
-        if (this.head == null){
+    public void getHead() {
+        if (this.head == null) {
             System.out.println("Lista Vazia");
         } else {
             System.out.println("Head: " + head.data);
@@ -38,8 +37,8 @@ public class LinkedList {
 
     }
 
-    public void getTail(){
-        if (this.tail == null){
+    public void getTail() {
+        if (this.tail == null) {
             System.out.println("Lista Vazia");
         } else {
             System.out.println("Tail: " + tail.data);
@@ -47,16 +46,23 @@ public class LinkedList {
 
     }
 
-    public void getLegth(){
+    public void getLegth() {
         System.out.println("Length: " + this.length);
 
     }
 
-    public void makeEmpty(){
+    public void makeEmpty() {
         // Apontando os 2 métodos para Null
         head = null;
         tail = null;
         length = 0; // Indicando que o tamanho da lista agora é 0
+    }
+
+    public static void main(String[] args) {
+        LinkedList list = new LinkedList("elemento 1");
+        list.getHead();
+        list.getTail();
+        list.getLegth();
     }
 
 }
