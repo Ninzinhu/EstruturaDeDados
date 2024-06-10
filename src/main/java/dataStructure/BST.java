@@ -50,7 +50,7 @@ public class BST {
         if (root == null) return false;
         if (root.value == value) return true;
         if (value > root.value) return contains(root.right, value);
-        if (value < root.value) return contains(root.left, value);
+        else return contains(root.left, value);
     }
 
 
