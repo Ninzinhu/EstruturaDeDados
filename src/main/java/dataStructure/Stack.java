@@ -31,5 +31,10 @@ public class Stack {
         }
     }
 
+    // Altura da Pilha
+    public void getHeight(){
+        System.out.println("Altura: " + height);
+    }
+
 
 }
