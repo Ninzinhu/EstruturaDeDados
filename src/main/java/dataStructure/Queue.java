@@ -44,5 +44,13 @@ public class Queue {
         System.out.println("Length: " + lenght);
     }
 
+    public void print(){
+        Node temp = first;
+        while (temp != null){
+            System.out.println(temp.value);
+            temp = temp.next;
+        }
+    }
+
 
 }
