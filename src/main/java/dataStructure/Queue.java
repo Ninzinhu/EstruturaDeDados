@@ -32,6 +32,7 @@ public class Queue {
         }
     }
 
+    // Método GetLast
     public void getLast() {
         if (last != null) {
             System.out.println(" Last: " + last.value);
@@ -40,18 +41,45 @@ public class Queue {
         }
     }
 
+    // Método GetLenght
     private void getLength() {
         System.out.println("Length: " + lenght);
     }
 
-    public void print(){
+    // Método Print
+    public void print() {
         System.out.println("----------------------------------");
         Node temp = first;
-        while (temp != null){
+        while (temp != null) {
             System.out.println(temp.value);
             temp = temp.next;
         }
         System.out.println("----------------------------------");
+    }
+
+    // Método Enfileirar
+    public void enqueue(int value) {
+        Node newNode = new Node(value);
+
+        if (lenght == 0) {
+            first = newNode;
+            last = newNode;
+        } else {
+            last.next = newNode;
+            last = newNode;
+        }
+        lenght++;
+    }
+
+
+    public static void main(String[] args) {
+        Queue myQueue = new Queue(1);
+
+        myQueue.getFirst();
+        myQueue.getLast();
+        myQueue.getLength();
+
+        myQueue.print();
     }
 
 
