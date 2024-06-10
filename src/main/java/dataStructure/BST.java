@@ -45,7 +45,7 @@ public class BST {
         inOrder(root);
     }
 
-    private void inOrder(final Tree.Node node) {
+    private void inOrder(final Node node) {
         // E R D (Esquerda,raiz, direita)
         if (node == null) return;
         inOrder(node.left);
@@ -56,6 +56,12 @@ public class BST {
 
 
     public static void main(String[] args) {
+        BST tree = new BST();
+        tree.insert(2);
+        tree.insert(1);
+        tree.insert(3);
+
+        tree.inOrder();
 
     }
 }
