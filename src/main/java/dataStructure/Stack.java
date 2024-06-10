@@ -3,7 +3,7 @@ package dataStructure;
 public class Stack {
 
     private Node top;
-    private Node height;
+    private  int height;
 
     class Node {
         int value;
