@@ -45,11 +45,13 @@ public class Queue {
     }
 
     public void print(){
+        System.out.println("----------------------------------");
         Node temp = first;
         while (temp != null){
             System.out.println(temp.value);
             temp = temp.next;
         }
+        System.out.println("----------------------------------");
     }
 
 
