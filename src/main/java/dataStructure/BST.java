@@ -91,6 +91,8 @@ public class BST {
             }
         }
 
+        return  root;
+
 
     }
 
