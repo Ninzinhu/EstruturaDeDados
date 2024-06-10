@@ -3,7 +3,7 @@ package dataStructure;
 public class Stack {
 
     private Node top;
-    private  int height;
+    private int height;
 
     class Node {
         int value;
@@ -39,7 +39,7 @@ public class Stack {
 
 
     // Método Print
-    public void print(){
+    public void print() {
         System.out.println("-------------------------------------");
         Node temp = top;
         while (temp != null) {
@@ -59,16 +59,23 @@ public class Stack {
             newNode.next = top;
             top = newNode;
         }
-        height ++;
+        height++;
     }
 
-    public static void main(String[] args)  {
-        Stack myStack = new Stack(4);
+    public static void main(String[] args) {
+        Stack myStack = new Stack(2);
 
         myStack.getTop();
         myStack.getHeight();
 
         myStack.print();
+
+        myStack.push(1);
+
+        myStack.print();
+        myStack.getTop();
+        myStack.getHeight();
+
 
     }
 
