@@ -30,4 +30,27 @@ public class Queue {
             System.out.println("A fila está vazia");
         }
     }
+    public void getLast(){
+        if(last != null){
+            System.out.println(" Last: " + last.value);
+        }else{
+            System.out.println("A fila está vazia");
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
