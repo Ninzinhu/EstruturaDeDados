@@ -108,7 +108,7 @@ public class LinkedList {
     }
 
     // Método Prepend
-    public void preprend(String data){
+    public void prepend(String data){
         Node newNode = new Node(data);
         if (length == 0){
             head = newNode;
@@ -145,6 +145,28 @@ public Node removeFirst(){
         return  temp;
     }
 
+ // Método Insert
+    public boolean insert(int index, String data){
+        if (index < 0 || index > length) return false;
+        if(index == 0){
+            prepend(data);
+            return true;
+        }
+        if (index == length){
+            append(data);
+            return true;
+        }
+
+        Node newNode = new Node(data);
+        Node temp = get(index - 1);
+        newNode.next = temp.next;
+        temp.next = newNode;
+        length++;
+        return true;
+
+    }
+
+
 
 
 
@@ -155,8 +177,10 @@ public Node removeFirst(){
         list.append("Elemento 3");
         list.preprend("elemento 0");
 
-       System.out.println(list.removeFirst().data);
-        list.print();
+        System.out.println(list.get(2).data);
+
+//       System.out.println(list.removeFirst().data);
+//        list.print();
 //        list.getHead();
 //        list.getTail();
 //        list.getLegth();
