@@ -50,6 +50,18 @@ public class Stack {
 
     }
 
+    // Método Push
+    public void push(int value) {
+        Node newNode = new Node(value);
+        if (height == 0) {
+            top = newNode;
+        } else {
+            newNode.next = top;
+            top = newNode;
+        }
+        height ++;
+    }
+
     public static void main(String[] args)  {
         Stack myStack = new Stack(4);
 
