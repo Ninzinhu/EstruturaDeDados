@@ -9,9 +9,10 @@ public class QueueReverse {
         solveQueue(queue, k);
         int n = queue.size() - k;
         while (n-- > 0) {
-            int element = queue.remove()
+            int element = queue.remove();
             queue.add(element);
         }
+        return queue;
 
     }
 
