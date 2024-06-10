@@ -79,7 +79,10 @@ public class BST {
         tree.insert(42);
         tree.insert(72);
 
-        tree.inOrder();
+
+        System.out.println(tree.contains(11));
+        System.out.println(tree.contains(99));
+//        tree.inOrder();
 
     }
 }
