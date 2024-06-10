@@ -54,44 +54,44 @@ public class BST {
     }
 
     // Método Menor valor
-    public int minValue(Node currentNode){
-        while(currentNode.left != null){
+    public int minValue(Node currentNode) {
+        while (currentNode.left != null) {
             currentNode = currentNode.left;
         }
-        
+
         return currentNode.value;
     }
 
 
     // Método Remover
-    public void deleteNode(int value){
-        deleteNode(root, value);
-        
+    public void deleteNode(int value) {
+        root = deleteNode(root, value);
+
     }
 
     private Node deleteNode(Node root, int value) {
         if (root == null) return null;
 
-        if(value < root.value) {
+        if (value < root.value) {
             root.left = deleteNode(root.left, value);
 
-        } else if (value > root,value){
+        } else if (value > root.value){
             root.right = deleteNode(root.right, value);
-        } else {
-            if (root.left == null) && (root.right == null) {
+        } else{
+            if ((root.left == null) && (root.right == null)) {
                 return null;
-            } else if(root.left == null){
+            } else if (root.left == null) {
                 return root.right;
-            } else if (root.right == null){
+            } else if (root.right == null) {
                 return root.left;
-            } else{
+            } else {
                 int minValue = minValue(root.right);
                 root.value = minValue;
                 root.right = deleteNode(root.right, minValue);
             }
         }
 
-        return  root;
+        return root;
 
 
     }
@@ -123,9 +123,8 @@ public class BST {
         tree.insert(72);
 
 
-        System.out.println(tree.contains(11));
-        System.out.println(tree.contains(99));
-//        tree.inOrder();
+        tree.deleteNode(66);
+        tree.inOrder();
 
     }
 }
