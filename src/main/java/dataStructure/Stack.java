@@ -22,19 +22,36 @@ public class Stack {
         top = newNode;
         height = 1;
     }
+
     // Método GetTop
-    public void getTop(){
-        if (top == null){
+    public void getTop() {
+        if (top == null) {
             System.out.println("Pilha Vazia");
-        } else{
+        } else {
             System.out.println("Topo: " + top.value);
         }
     }
 
     // Altura da Pilha
-    public void getHeight(){
+    public void getHeight() {
         System.out.println("Altura: " + height);
     }
 
+
+    // Método Print
+    public void print(){
+        System.out.println("-------------------------------------");
+        Node temp = top;
+        while (temp != null) {
+            System.out.println(temp.value);
+            temp = temp.next;
+        }
+        System.out.println("-------------------------------------");
+
+    }
+
+    public static void main(String[] args)  {
+
+    }
 
 }
