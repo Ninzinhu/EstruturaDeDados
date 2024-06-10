@@ -60,11 +60,13 @@ public class LinkedList {
 
     // Método Print
     public void print() {
+        System.out.println("_________________________________");
         Node temp = this.head;
         while (temp != null) {
             System.out.println(temp.data);
             temp = temp.next;
         }
+        System.out.println("__________________________________________");
     }
 
     // Método append
@@ -80,6 +82,31 @@ public class LinkedList {
         length++;
     }
 
+    // Método Remover do final da lista
+    public Node removeLast()    {
+        if (length == 0) return null;
+        Node pre = head;
+        Node temp = null;
+
+        while(pre.next != tail) {
+            pre = pre.next;
+        }
+
+        temp = tail;
+        tail = pre;
+        tail.next = null;
+
+        length--;
+        if(length == 0) {
+            head = null;
+            tail = null;
+
+        }
+
+        return temp;
+
+    }
+
 
 
 
@@ -87,10 +114,15 @@ public class LinkedList {
 
     public static void main(String[] args) {
         LinkedList list = new LinkedList("elemento 1");
-        list.getHead();
-        list.getTail();
-        list.getLegth();
+        list.append("Elemento 2");
+        list.append("Elemento 3");
+
+        System.out.println(list.removeLast().data);
         list.print();
+//        list.getHead();
+//        list.getTail();
+//        list.getLegth();
+//        list.print();
     }
 
 }
