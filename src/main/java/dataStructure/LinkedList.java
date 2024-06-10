@@ -120,6 +120,20 @@ public class LinkedList {
         length++;
     }
 
+    // Método Remover do Inicio
+public Node removeFirst(){
+        if (length == 0 ) return null;
+        Node temp = head;
+        head = head.next;
+        temp.next = null;
+        length--;
+        if(length == 0){
+            head = null;
+            tail = null;
+
+        }
+        return temp;
+}
 
 
 
@@ -129,8 +143,9 @@ public class LinkedList {
         LinkedList list = new LinkedList("elemento 1");
         list.append("Elemento 2");
         list.append("Elemento 3");
+        list.preprend("elemento 0");
 
-        System.out.println(list.removeLast().data);
+       System.out.println(list.removeFirst().data);
         list.print();
 //        list.getHead();
 //        list.getTail();
