@@ -40,11 +40,9 @@ public class Queue {
         }
     }
 
-private void getLength(){
-    System.out.println("Length: " + lenght);
-}
-
-
+    private void getLength() {
+        System.out.println("Length: " + lenght);
+    }
 
 
 }
