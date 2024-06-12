@@ -43,6 +43,6 @@ public class PessoaBuilder {
     }
 
     public Pessoa criarPessoa(){
-        new
+        return new Pessoa(nome, sobreNome, documento, email, apelido, dataNacimento);
     }
 }
