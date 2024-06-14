@@ -10,7 +10,10 @@ public class TesteProdutoComFactoryMethod {
 
         Produto produtoFisico = ProdutoFactory.getInstance(TipoProdutoEnum.FISICO);
 
+        Produto brinquedos = ProdutoFactory.getInstance(TipoProdutoEnum.TOYS);
+
         System.out.println(produtoFisico);
         System.out.println(produtoDigital);
+        System.out.println(brinquedos);
     }
 }

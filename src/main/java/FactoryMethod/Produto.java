@@ -34,6 +34,15 @@ public class Produto {
     public void setPossuiDimensoesFisicas(Boolean possuiDimensoesFisicas) {
         this.possuiDimensoesFisicas = possuiDimensoesFisicas;
     }
+
+    @Override
+    public String toString() {
+        return "Produto{" +
+                "descricao='" + descricao + '\'' +
+                ", preco=" + preco +
+                ", possuiDimensoesFisicas=" + possuiDimensoesFisicas +
+                '}';
+    }
 }
 
 

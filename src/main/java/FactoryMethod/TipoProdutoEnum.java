@@ -5,7 +5,8 @@ import java.math.BigDecimal;
 public enum TipoProdutoEnum {
 
     FISICO,
-    DIGITAL;
+    DIGITAL,
+    TOYS;
 
 
 }
