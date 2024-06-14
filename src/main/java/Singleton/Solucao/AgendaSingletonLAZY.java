@@ -12,7 +12,7 @@ public class AgendaSingletonLAZY {
 
 
     // Adicionando no Map
-    public AgendaSingletonLAZY() {
+    private AgendaSingletonLAZY() {
         diasDisponiveis.put("Domingo", Boolean.TRUE);
         diasDisponiveis.put("Segunda", Boolean.TRUE);
         diasDisponiveis.put("Terça", Boolean.TRUE);

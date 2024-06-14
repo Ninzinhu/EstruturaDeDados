@@ -2,10 +2,12 @@ package Singleton.Solucao;
 
 import Singleton.Agenda;
 
+import java.lang.reflect.Constructor;
+import java.lang.reflect.InvocationTargetException;
 import java.util.Calendar;
 
 public class TesteAgenda {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException {
 //        AgendaSingletonEAGER agenda1 = AgendaSingletonEAGER.getInstance();
 //        AgendaSingletonEAGER agenda2 = AgendaSingletonEAGER.getInstance();
 //        System.out.println(agenda1);
@@ -20,6 +22,15 @@ public class TesteAgenda {
         AgendaSingletonLAZY agenda2 = AgendaSingletonLAZY.getInstance();
         System.out.println(agenda1);
         System.out.println(agenda2);
+
+        // reflection
+        Constructor<AgendaSingletonLAZY> construtorTravesso= AgendaSingletonLAZY.class.getDeclaredConstructor();
+        construtorTravesso.setAccessible(true);
+        AgendaSingletonLAZY agendaTravessa = construtorTravesso.newInstance();
+        AgendaSingletonLAZY agendaTravessa2 = construtorTravesso.newInstance();
+
+        System.out.println(agendaTravessa2);
+        System.out.println(agendaTravessa);
 
         reservaDiaEAGER("Sexta");
         reservaDiaEAGER("Sábado");
