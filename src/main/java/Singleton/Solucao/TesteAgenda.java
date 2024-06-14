@@ -41,14 +41,14 @@ public class TesteAgenda {
         System.out.println(agenda1.hashCode());
         System.out.println(agenda2.hashCode());
 
-        // reflection Enum
-//        Constructor<AgendaSingletonEnum> construtorTravesso= AgendaSingletonEnum.class.getDeclaredConstructor();
-//        construtorTravesso.setAccessible(true);
-//        AgendaSingletonEnum agendaTravessa = construtorTravesso.newInstance();
-//        AgendaSingletonEnum agendaTravessa2 = construtorTravesso.newInstance();
-//
-//        System.out.println(agendaTravessa2.hashCode());
-//        System.out.println(agendaTravessa.hashCode());
+        // reflection Enum (Proteção contra isso utiliza o ENum)
+        Constructor<AgendaSingletonEnum> construtorTravesso= AgendaSingletonEnum.class.getDeclaredConstructor();
+        construtorTravesso.setAccessible(true);
+        AgendaSingletonEnum agendaTravessa = construtorTravesso.newInstance();
+        AgendaSingletonEnum agendaTravessa2 = construtorTravesso.newInstance();
+
+        System.out.println(agendaTravessa2.hashCode());
+        System.out.println(agendaTravessa.hashCode());
 
         reservaDiaEnum("Sexta");
         reservaDiaEnum("Sábado");
