@@ -2,6 +2,7 @@ package Singleton.Solucao;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Objects;
 
 public class AgendaSingletonLAZY {
 
@@ -22,7 +23,13 @@ public class AgendaSingletonLAZY {
     }
 
     public static AgendaSingletonLAZY getInstance() {
-        return INSTANCE;
+        if (Objects.isNull(INSTANCE)) {
+            INSTANCE = new AgendaSingletonLAZY();
+            return INSTANCE
+        } else {
+            return INSTANCE;
+        }
+
     }
 
     public Map<String, Boolean> getDias() {
