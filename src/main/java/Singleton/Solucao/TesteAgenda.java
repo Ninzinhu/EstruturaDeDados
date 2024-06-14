@@ -18,22 +18,40 @@ public class TesteAgenda {
 //        reservaDiaEAGER("Sábado");
 
 
-        AgendaSingletonLAZY agenda1 = AgendaSingletonLAZY.getInstance();
-        AgendaSingletonLAZY agenda2 = AgendaSingletonLAZY.getInstance();
-        System.out.println(agenda1);
-        System.out.println(agenda2);
+//        AgendaSingletonLAZY agenda1 = AgendaSingletonLAZY.getInstance();
+//        AgendaSingletonLAZY agenda2 = AgendaSingletonLAZY.getInstance();
+//        System.out.println(agenda1);
+//        System.out.println(agenda2);
 
-        // reflection
-        Constructor<AgendaSingletonLAZY> construtorTravesso= AgendaSingletonLAZY.class.getDeclaredConstructor();
-        construtorTravesso.setAccessible(true);
-        AgendaSingletonLAZY agendaTravessa = construtorTravesso.newInstance();
-        AgendaSingletonLAZY agendaTravessa2 = construtorTravesso.newInstance();
+        // reflection Lazy
+//        Constructor<AgendaSingletonLAZY> construtorTravesso= AgendaSingletonLAZY.class.getDeclaredConstructor();
+//        construtorTravesso.setAccessible(true);
+//        AgendaSingletonLAZY agendaTravessa = construtorTravesso.newInstance();
+//        AgendaSingletonLAZY agendaTravessa2 = construtorTravesso.newInstance();
+//
+//        System.out.println(agendaTravessa2);
+//        System.out.println(agendaTravessa);
+//
+//        reservaDiaEAGER("Sexta");
+//        reservaDiaEAGER("Sábado");
 
-        System.out.println(agendaTravessa2);
-        System.out.println(agendaTravessa);
 
-        reservaDiaEAGER("Sexta");
-        reservaDiaEAGER("Sábado");
+        AgendaSingletonEnum agenda1 = AgendaSingletonEnum.getInstance();
+        AgendaSingletonEnum agenda2 = AgendaSingletonEnum.getInstance();
+        System.out.println(agenda1.hashCode());
+        System.out.println(agenda2.hashCode());
+
+        // reflection Enum
+//        Constructor<AgendaSingletonEnum> construtorTravesso= AgendaSingletonEnum.class.getDeclaredConstructor();
+//        construtorTravesso.setAccessible(true);
+//        AgendaSingletonEnum agendaTravessa = construtorTravesso.newInstance();
+//        AgendaSingletonEnum agendaTravessa2 = construtorTravesso.newInstance();
+//
+//        System.out.println(agendaTravessa2.hashCode());
+//        System.out.println(agendaTravessa.hashCode());
+
+        reservaDiaEnum("Sexta");
+        reservaDiaEnum("Sábado");
 
     }
 
@@ -47,6 +65,14 @@ public class TesteAgenda {
 
     public static void reservaDiaLAZY(String dia) {
         AgendaSingletonLAZY agenda = AgendaSingletonLAZY.getInstance();
+        agenda.ocupa(dia);
+        System.out.println(agenda.getDias());
+
+        Calendar.getInstance();
+    }
+
+    public static void reservaDiaEnum(String dia) {
+        AgendaSingletonEnum agenda = AgendaSingletonEnum.getInstance();
         agenda.ocupa(dia);
         System.out.println(agenda.getDias());
 
