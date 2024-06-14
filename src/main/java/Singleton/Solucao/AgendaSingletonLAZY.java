@@ -25,11 +25,9 @@ public class AgendaSingletonLAZY {
     public static AgendaSingletonLAZY getInstance() {
         if (Objects.isNull(INSTANCE)) {
             INSTANCE = new AgendaSingletonLAZY();
-            return INSTANCE
-        } else {
             return INSTANCE;
         }
-
+        return INSTANCE;
     }
 
     public Map<String, Boolean> getDias() {
