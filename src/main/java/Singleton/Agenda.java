@@ -20,7 +20,7 @@ public class Agenda {
         diasDisponiveis.put("Sábado", Boolean.TRUE);
     }
 
-    public Map<String, Boolean> getDiasDisponiveis(){ return diasDisponiveis;}
+    public Map<String, Boolean> getDias(){ return diasDisponiveis;}
 
     public void ocupa(String dia) { diasDisponiveis.replace(dia, Boolean.FALSE);}
 }
