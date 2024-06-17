@@ -10,7 +10,8 @@ import java.time.LocalDate;
 public class TesteProxy {
 
     public static void main(String[] args) {
-        PessoaService pessoaService = new PessoaService(new PessoaRepository());
+        PessoaRepositoryProxy pessoaRepositoryProxy = new PessoaRepositoryProxy();
+        PessoaService pessoaService = new PessoaService(pessoaRepositoryProxy);
 
         Pessoa pessoa = new PessoaBuilder()
                 .nome("João")
