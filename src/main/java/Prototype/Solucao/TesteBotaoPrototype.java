@@ -18,6 +18,8 @@ public class TesteBotaoPrototype {
 
         Botao botaoAmarelo = BotaoRegistry.getBotao("BOTAO_AMARELO");
         System.out.println(botaoAmarelo);
+        botaoAmarelo.setLargura(200);
+        System.out.println(botaoAmarelo);
 
 
 
