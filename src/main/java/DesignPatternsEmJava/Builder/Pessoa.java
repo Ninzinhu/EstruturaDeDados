@@ -79,4 +79,9 @@ public class Pessoa {
                 ", dataNascimento='" + dataNacimento + '\'' +
                 '}';
     }
+
+
+    public String getDataNascimento() {
+        return null;
+    }
 }
