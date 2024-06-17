@@ -9,14 +9,15 @@ public class TesteOperacoesContaCorrenteAdpter {
 
     public static void main(String[] args) {
 
-
-        JarOperacoesContaCorrenteAdpter jarContaAdpter = new JarOperacoesContaCorrenteAdpter();
+        JarOperacoesContaCorrente jarConta = new JarOperacoesContaCorrente();
+        JarOperacoesContaCorrenteAdpter jarContaAdpter = new JarOperacoesContaCorrenteAdpter(jarConta);
         ClienteJarOperaceosCorrenteAdpter client = new ClienteJarOperaceosCorrenteAdpter(jarContaAdpter);
 
         BigDecimal valorPretendidoParaSaque = new BigDecimal(1000);
 
 
-        client.saca(valorPretendidoParaSaque);
-        client.deposita(BigDecimal.valueOf(500));
+        client.saca(valorPretendidoParaSaque); // 1 Chamada
+
+        client.deposita(BigDecimal.valueOf(500)); // 2 Chamada
     }
 }
