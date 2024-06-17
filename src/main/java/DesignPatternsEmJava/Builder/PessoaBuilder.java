@@ -45,4 +45,8 @@ public class PessoaBuilder {
     public Pessoa criarPessoa(){
         return new Pessoa(nome, sobreNome, documento, email, apelido, dataNacimento);
     }
+
+    public PessoaBuilder dataNascimento(LocalDate of) {
+        return this;
+    }
 }
