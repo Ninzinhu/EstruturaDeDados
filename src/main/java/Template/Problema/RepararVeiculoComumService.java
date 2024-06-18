@@ -26,11 +26,11 @@ public class RepararVeiculoComumService {
     }
 
     private void notificarPerdaTotalParaSeguradora() {
-        System.out.println("Notificando perda total para Seguradora");
+        System.out.println("Notificando perda total para Seguradora..");
     }
 
     private void notificarReparoParaSeguradora() {
-        System.out.println("Notificando reparo para Seguradora");
+        System.out.println("Notificando reparo para Seguradora...");
 
     }
 

@@ -8,7 +8,7 @@ public class TesteRepararVeiculos   {
         System.out.println("-------------------LUXO---------------------");
 
         VeiculoParaReparo veiculoDeLuxo = new VeiculoParaReparo();
-        veiculoDeLuxo.setPorcentagemDano(49);
+        veiculoDeLuxo.setPorcentagemDano(51);
 
         RepararVeiculoDeLuxoService rpl = new RepararVeiculoDeLuxoService(veiculoDeLuxo);
 
@@ -17,7 +17,7 @@ public class TesteRepararVeiculos   {
         System.out.println("------------------COMUM---------------------");
 
         VeiculoParaReparo veiculoComum = new VeiculoParaReparo();
-        veiculoComum.setPorcentagemDano(71);
+        veiculoComum.setPorcentagemDano(59);
 
         RepararVeiculoComumService rpc = new RepararVeiculoComumService(veiculoComum);
 
