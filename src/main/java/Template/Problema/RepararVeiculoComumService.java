@@ -21,6 +21,10 @@ public class RepararVeiculoComumService {
         }
     }
 
+    private boolean veiculoParaReparo() {
+        return veiculoParaReparo.getPorcentagemDano() <= 70;
+    }
+
     private void notificarPerdaTotalParaSeguradora() {
         System.out.println("Notificando perda total para Seguradora");
     }
