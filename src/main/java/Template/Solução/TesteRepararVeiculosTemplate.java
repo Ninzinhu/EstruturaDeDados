@@ -12,16 +12,16 @@ public class TesteRepararVeiculosTemplate {
         VeiculoParaReparo veiculoDeLuxo = new VeiculoParaReparo();
         veiculoDeLuxo.setPorcentagemDano(51);
 
-        RepararVeiculoDeLuxoService rpl = new RepararVeiculoDeLuxoService(veiculoDeLuxo);
+        ReparoVeiculoService rpl = new ReparoVeiculoDeLuxoServiceComTemplate(veiculoDeLuxo);
 
         rpl.reparaVeiculo();
 
         System.out.println("------------------COMUM---------------------");
 
         VeiculoParaReparo veiculoComum = new VeiculoParaReparo();
-        veiculoComum.setPorcentagemDano(59);
+        veiculoComum.setPorcentagemDano(69);
 
-        RepararVeiculoComumService rpc = new RepararVeiculoComumService(veiculoComum);
+        ReparoVeiculoService rpc = new ReparoVeiculoComumServiceComTemplate(veiculoComum);
 
         rpc.reparaVeiculo();
     }
