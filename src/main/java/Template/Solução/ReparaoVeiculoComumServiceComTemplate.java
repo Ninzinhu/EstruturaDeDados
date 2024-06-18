@@ -13,6 +13,6 @@ public class ReparaoVeiculoComumServiceComTemplate extends ReparoVeiculoService 
 
     @Override
     protected boolean veiculoParaReparo() {
-        return false;
+        return veiculoParaReparo.getPorcentagemDano() <= 70;
     }
 }
