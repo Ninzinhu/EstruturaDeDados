@@ -1,10 +1,11 @@
-package Strategy;
+package Strategy.Solucao;
 
-import Strategy.Solucao.CalculadorReajusteAnunalSalario;
+import Strategy.Funcionario;
+import Strategy.TipoContratacaoEnum;
 
 import java.math.BigDecimal;
 
-public class ReajusAnualSalario {
+public class ReajusteSalarioComStrategy {
 
     public void calculeReajusteAnual(Funcionario funcionario, CalculadorReajusteAnunalSalario calculadorReajusteAnunalSalario) {
         calculadorReajusteAnunalSalario(funcionario);
@@ -13,7 +14,7 @@ public class ReajusAnualSalario {
     private void calculadorReajusteAnunalSalario(Funcionario funcionario) {
     }
 
-    if (TipoContratacaoEnum.CLT.name().equals(funcionario.getTipoContratacao().name())) {
+     if (TipoContratacaoEnum.CLT.name().equals(funcionario.getTipoContratacao().name())) {
         BigDecimal salario = funcionario.getSalario();
         funcionario.setSalario(salario.add(salario.multiply(new BigDecimal(0.10))));
     } else if (TipoContratacaoEnum.PJ.equals(funcionario.getTipoContratacao())) {
@@ -24,6 +25,4 @@ public class ReajusAnualSalario {
         funcionario.setSalario(salario.add(salario.multiply(new BigDecimal(0.02))));
 
     }
-
-
 }
