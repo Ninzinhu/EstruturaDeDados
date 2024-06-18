@@ -23,9 +23,9 @@ public class TesteAjusteSalario {
         funcionarioEstagio.setSalario(new BigDecimal(2000));
 
         // Calcular nossos reajustes aqui
-        reajusAnualSalario.calculeReajusteAnual(funcionarioCLT);
-        reajusAnualSalario.calculeReajusteAnual(funcionarioPJ);
-        reajusAnualSalario.calculeReajusteAnual(funcionarioEstagio);
+//        reajusAnualSalario.calculeReajusteAnual(funcionarioCLT);
+//        reajusAnualSalario.calculeReajusteAnual(funcionarioPJ);
+//        reajusAnualSalario.calculeReajusteAnual(funcionarioEstagio);
 
         System.out.println(funcionarioCLT);
         System.out.println(funcionarioPJ);
