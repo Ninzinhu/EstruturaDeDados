@@ -5,6 +5,8 @@ import Template.VeiculoParaReparo;
 public class TesteRepararVeiculos   {
 
     public static void main(String[] args) {
+        System.out.println("-------------------LUXO---------------------");
+
         VeiculoParaReparo veiculoDeLuxo = new VeiculoParaReparo();
         veiculoDeLuxo.setPorcentagemDano(49);
 
@@ -12,7 +14,7 @@ public class TesteRepararVeiculos   {
 
         rpl.reparaVeiculo();
 
-        System.out.println("----------------------------------------");
+        System.out.println("------------------COMUM---------------------");
 
         VeiculoParaReparo veiculoComum = new VeiculoParaReparo();
         veiculoComum.setPorcentagemDano(71);
