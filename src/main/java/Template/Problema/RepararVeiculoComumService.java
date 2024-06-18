@@ -10,10 +10,10 @@ public class RepararVeiculoComumService {
         this.veiculoParaReparo = veiculoParaReparo;
     }
 
-    public void reparaVeiculo(){
+    public void reparaVeiculo() {
         entradaOficina();
         analisarDanos();
-        if(veiculoParaReparo()){
+        if (veiculoParaReparo()) {
             repararVeiculo();
             notificarReparoParaSeguradora();
         } else {
