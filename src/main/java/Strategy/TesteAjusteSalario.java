@@ -29,6 +29,5 @@ public class TesteAjusteSalario {
         System.out.println(funcionarioEstagio);
 
 
-
     }
 }
