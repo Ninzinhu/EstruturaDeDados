@@ -22,7 +22,11 @@ public class TesteAjusteSalario {
         funcionarioEstagio.setTipoContratacao(TipoContratacaoEnum.ESTAGIO);
         funcionarioEstagio.setSalario(new BigDecimal(2000));
 
-        // Clacular nossos reajustes aqui
+        // Calcular nossos reajustes aqui
+
+        System.out.println(funcionarioCLT);
+        System.out.println(funcionarioPJ);
+        System.out.println(funcionarioEstagio);
 
 
 
